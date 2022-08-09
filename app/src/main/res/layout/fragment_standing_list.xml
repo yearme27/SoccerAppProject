@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/soc_background">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_standing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/standing_list_item" />
+
+    <TextView
+        android:id="@+id/iv_team"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:text="Logo"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_position"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Rank"-->
+<!--        app:layout_constraintStart_toEndOf="@id/iv_team"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <TextView
+        android:id="@+id/tv_team_name"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Team Name"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/iv_team"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_wins"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="W"
+        app:layout_constraintStart_toEndOf="@id/tv_team_name"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_loss"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="L"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/tv_wins"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_draws"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="D"
+        app:layout_constraintStart_toEndOf="@id/tv_loss"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_games_played"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="GP"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/tv_draws"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="P"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/tv_games_played"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ProgressBar
+        android:id="@+id/pb_load_standing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_error_text_standing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

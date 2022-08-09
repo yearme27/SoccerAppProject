@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/soc_background">
+
+    <Button
+        android:id="@+id/btn_list_league"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Leagues"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_league_abbr"/>
+
+    <Button
+        android:id="@+id/btn_league_abbr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search League For Season"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_list_league"/>
+
+    <EditText
+        android:id="@+id/et_abbr_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/btn_league_abbr"
+        app:layout_constraintStart_toStartOf="@id/btn_league_abbr"
+        app:layout_constraintEnd_toEndOf="@id/btn_league_abbr"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="LEAGUES AVAILABLE FOR SEARCH\narg.1, aus.1, bra.1, chn.1,ned.1\neng.1, fra.1, ger.1, idn.1, ita.1\njpn.1, mys.1, mex.1, por.1, rus.1\nsgp.1, esp.1, tha.1, tur.1, uga.1"
+        app:layout_constraintTop_toBottomOf="@id/btn_league_abbr"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/btn_league_abbr"
+        app:layout_constraintStart_toStartOf="@id/btn_league_abbr"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

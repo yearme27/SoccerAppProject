@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/white"
+    android:layout_margin="8dp"
+    app:cardElevation="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_league"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="ENGLISH PREMIER LEAGUE"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_abbreviation"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="PREM"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tv_league"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="2020"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_abbreviation"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

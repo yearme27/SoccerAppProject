@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_starting_page">
+
+    <fragment
+        android:id="@+id/nav_starting_page"
+        android:name="com.example.soccerappproject.view.StartingPageFragment">
+        <action
+            android:id="@+id/action_starting_page_to_league_list"
+            app:destination="@id/nav_league_list"/>
+        <action
+            android:id="@+id/action_season_list"
+            app:destination="@id/nav_season_list"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_league_list"
+        android:name="com.example.soccerappproject.view.LeagueListFragment">
+        <action
+            android:id="@+id/action_league_list_to_season_list"
+            app:destination="@id/nav_season_list"/>
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_season_list"
+        android:name="com.example.soccerappproject.view.SeasonListFragment">
+        <action
+            android:id="@+id/action_season_list_to_standing"
+            app:destination="@id/nav_standing"/>
+<!--        <argument-->
+<!--            android:name="Season_item"-->
+<!--            app:argType="com.example.soccerappproject.model.SeasonItem"-->
+<!--            app:nullable="true"/>-->
+        <argument
+            android:name="league_id"
+            app:argType="string"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_standing"
+        android:name="com.example.soccerappproject.view.StandingListFragment">
+        <argument
+            android:name="league_id"
+            app:argType="string"/>
+        <argument
+            android:name="season_year"
+            app:argType="integer"/>
+    </fragment>
+
+</navigation>
